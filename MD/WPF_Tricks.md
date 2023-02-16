@@ -133,16 +133,16 @@ public ImplantSystemItem()
 
 全部做完後重建專案，到`MainWindow`加上ImplantSystemItem，在輸入屬性時就會發現多了剛新增的`IsFavorite`可以使用<br/>
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/02.png)
-<br />
+<br /> <br />
 把`IsFavorite`設定為True在預覽畫面也能即時顯示結果<br />
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/03.png)
-<br />
+<br /> <br />
 
-ImplantSystemItem.xaml.cs<br />
+ImplantSystemItem.xaml.cs內容<br />
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/04.png)
 <br />
 
-ImplantSystemItem.xaml<br />
+ImplantSystemItem.xaml內容<br />
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/05.png)
 <br />
 
