@@ -61,7 +61,7 @@ File.WriteAllText(@"D:\Fixture.json", jsonString);
 <br />
 
 打開`D:\\Fixture.json`檔案，內容會長這樣:<br />
-![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/Json/07.png)
+![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/Json/05.png)
 <br />
 
 ### 匯入Json
