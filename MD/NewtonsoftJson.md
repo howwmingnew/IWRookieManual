@@ -4,7 +4,6 @@
 ----
 
 ## 目次
-- [安裝及設定Newtonsoft Json套件](#安裝Newtonsoft Json套件)
 - [匯出Json](#匯出Json)
 - [匯出Json](#匯出Json)
 
