@@ -7,6 +7,7 @@
 - [委派](#委派)
 - [WPF物件新增屬性](#WPF物件新增屬性)
 - [陣列內取Index](#陣列內取Index)
+- [C# SolidColorBrush](#SolidColorBrush)
 
 ----
 
@@ -161,6 +162,22 @@ For lists you can use List<T>.FindIndex:<br />
 int keyIndex = words.FindIndex(w => w.IsKey);
 ```
 <br />
+	
+----
+
+### SolidColorBrush
+
+SolidColorBrush Hex:
+```C#
+(SolidColorBrush)new BrushConverter().ConvertFrom("#ffaacc");
+```
+ <br />
+
+ SolidColorBrush Argb:
+```C#
+SolidColorBrush(Color.FromArgb(255, 255, 0, 0))
+```
+	
 ----
 [使用委派 (C# 程式設計手冊)](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates)
 
