@@ -6,6 +6,7 @@
 ## 目次
 - [委派](#委派)
 - [WPF物件新增屬性](#WPF物件新增屬性)
+- [陣列內取Index](#陣列內取Index)
 
 ----
 
@@ -131,7 +132,7 @@ public ImplantSystemItem()
 ```
 <br />
 
-全部做完後重建專案，到`MainWindow`加上ImplantSystemItem，在輸入屬性時就會發現多了剛新增的`IsFavorite`可以使用<br/>
+全部做完後重建專案，到`MainWindow`加上ImplantSystemItem，在輸入屬性時就會發現多了剛新增的`IsFavorite`可以使用<br />
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/02.png)
 <br /> <br />
 把`IsFavorite`設定為True在預覽畫面也能即時顯示結果<br />
@@ -146,6 +147,20 @@ ImplantSystemItem.xaml內容<br />
 ![](https://raw.githubusercontent.com/howwmingnew/IWRookieManual/main/Photos/CommonFunctions/05.png)
 <br />
 
+----
+
+### 陣列內取Index
+For arrays you can use: Array.FindIndex<T>:<br />
+```C#
+int keyIndex = Array.FindIndex(words, w => w.IsKey);
+```
+<br />
+	
+For lists you can use List<T>.FindIndex:<br />
+```C#
+int keyIndex = words.FindIndex(w => w.IsKey);
+```
+<br />
 ----
 [使用委派 (C# 程式設計手冊)](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates)
 
