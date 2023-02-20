@@ -5,7 +5,7 @@
 
 ## 目次
 - [匯出Json](#匯出Json)
-- [匯出Json](#匯出Json)
+- [匯入Json](#匯入Json)
 
 ----
 
