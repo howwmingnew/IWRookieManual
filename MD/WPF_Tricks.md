@@ -8,6 +8,7 @@
 - [WPF物件新增屬性](#WPF物件新增屬性)
 - [陣列內取Index](#陣列內取Index)
 - [C# SolidColorBrush](#SolidColorBrush)
+- [CommandLine呼叫](#CommandLine呼叫)
 
 ----
 
@@ -156,13 +157,13 @@ For arrays you can use: Array.FindIndex<T>:<br />
 int keyIndex = Array.FindIndex(words, w => w.IsKey);
 ```
 <br />
-	
+
 For lists you can use List<T>.FindIndex:<br />
 ```C#
 int keyIndex = words.FindIndex(w => w.IsKey);
 ```
 <br />
-	
+
 ----
 
 ### SolidColorBrush
@@ -177,7 +178,54 @@ SolidColorBrush Hex:
 ```C#
 SolidColorBrush(Color.FromArgb(255, 255, 0, 0))
 ```
-	
+----
+### CommandLine呼叫
+
+簡易版CommanLine呼叫:<br />
+
+```C#
+string strCmdText;
+strCmdText= "/C copy /b Image1.jpg + Archive.rar Image2.jpg";
+System.Diagnostics.Process.Start("CMD.exe",strCmdText);
+```
+<br />
+
+完整版CommandLine呼叫:<br />
+```C#
+/// <summary>
+/// CommandLine(命令提示字元)
+/// </summary>
+/// <param name="fileName">要開啟的檔案</param>
+/// <param name="arguments">要傳進去的參數</param>
+/// <param name="byAdmin">Admin管理員執行</param>
+public static void RunCommandLine(string fileName, string arguments = "", bool admin = true, bool waitingResult = false)
+{
+    if (fileName == ConstCommandLine.Browser) { arguments = ConstCommandLine.BrowserArguments + arguments; }
+
+    try
+    {
+        Process process = new Process();
+        if (admin)
+        {
+            ProcessStartInfo processStartInfo = new ProcessStartInfo(fileName)
+            { UseShellExecute = true, Verb = "runas" };
+            process.StartInfo = processStartInfo;
+        }
+        else
+        { process.StartInfo.UseShellExecute = false; process.StartInfo.FileName = fileName; }
+        process.StartInfo.Arguments = arguments;
+        process.Start();
+        if (waitingResult) { process.WaitForExit(); }
+    }
+    catch (Exception ex)
+    {
+        //WpfLib4Ray.Main.WPFShowMessage4OMP(owner: (OrderManagerPro.MainWindow)App.Current.MainWindow, ex.Message, icon: MessageBoxImage.Error);
+        MessageBox.Show(ex.Message);
+        return;
+    }
+}
+```
+
 ----
 [使用委派 (C# 程式設計手冊)](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates)
 
