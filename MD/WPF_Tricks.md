@@ -9,6 +9,7 @@
 - [陣列內取Index](#陣列內取Index)
 - [C# SolidColorBrush](#SolidColorBrush)
 - [CommandLine呼叫](#CommandLine呼叫)
+- [Console 輸出](#Console輸出)
 
 ----
 
@@ -224,6 +225,49 @@ public static void RunCommandLine(string fileName, string arguments = "", bool a
         return;
     }
 }
+```
+
+----
+
+### Console輸出
+
+原本:
+```C#
+Name:Omelchenko          Score[0]:97
+Name:Garcia      Score[0]:97
+Name:Fakhouri    Score[0]:99
+Name:Feng        Score[0]:93
+Name:Garcia      Score[0]:92
+Name:Adams       Score[0]:99
+Name:Zabokritski         Score[0]:96
+Name:Tucker      Score[0]:94
+```
+ <br />
+
+排版後:
+ ```C#
+Omelchenko                        97
+Garcia                            97
+Fakhouri                          99
+Feng                              93
+Garcia                            92
+Adams                             99
+Zabokritski                       96
+Tucker                            94
+```
+ <br />
+
+ 方法:
+```C#
+public static void prn(string fname, string fvalue)
+{
+    string outstring = fname.PadRight(20)  +"\t\t  " + fvalue;
+    Console.WriteLine(outstring);
+}
+```
+
+```C#
+prn(student.Name, student.Scores.ToString());
 ```
 
 ----
