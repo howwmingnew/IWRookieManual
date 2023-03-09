@@ -10,6 +10,7 @@
 - [C# SolidColorBrush](#SolidColorBrush)
 - [CommandLine呼叫](#CommandLine呼叫)
 - [Console 輸出](#Console輸出)
+- [Lambda 運算式和匿名函式](#Lambda)
 
 ----
 
@@ -269,7 +270,55 @@ public static void prn(string fname, string fvalue)
 ```C#
 prn(student.Name, student.Scores.ToString());
 ```
+----
+
+### Lambda 運算式和匿名函式
+
+> 您可以使用 Lambda 運算式 來建立匿名函式。 請使用 `Lambda 宣告運算子 =>` 來分隔 Lambda 的參數清單及其主體。 Lambda 運算式可以是下列兩種形式之一：
+
+在下列範例中，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回平方的值 `x` ，會指派給委派類型的變數：
+```C#
+Func<int, int> square = x => x * x;
+Console.WriteLine(square(5));
+// Output:
+// 25
+```
+<br />
+
+您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 [Task.Run(Action)](https://learn.microsoft.com/zh-tw/dotnet/api/system.threading.tasks.task.run#system-threading-tasks-task-run(system-action)) 方法的引數，以傳遞應該在背景中執行的程式碼。 您也可以在 [C# 中撰寫 LINQ](https://learn.microsoft.com/zh-tw/dotnet/csharp/linq/)時使用 Lambda 運算式，如下列範例所示：
+```C#
+int[] numbers = { 2, 3, 4, 5 };
+var squaredNumbers = numbers.Select(x => x * x);
+Console.WriteLine(string.Join(" ", squaredNumbers));
+// Output:
+// 4 9 16 25
+```
+<br />
+
+您會以括弧括住 Lambda 運算式的輸入參數。 以空括號指定零個輸入參數：
+```C#
+Action line = () => Console.WriteLine();
+```
+<br />
+
+篩選:
+```C#
+Implant implant = ImplantList.Find(x => x.Name == "SBII");
+```
+
+搭配LINQ的篩選:
+```C#
+Implant focusItem = ImplantList.Where( c => c.Name != string.Empty ).Where( c => c.Name == colValue).FirstOrDefault();
+```
+
+搭配LINQ的排序:
+```C#
+List<Implant> platformSpec = platformSpec.OrderBy(x => x.Platform).ToList();              //遞增排序
+List<Implant> platformSpec = platformSpec.OrderByDescending(x => x.Platform).ToList();    //遞減排序
+List<Implant> implantList = implantList.OrderBy(x => x.Platform).ThenBy(x => x.Diameter).ToList();  //先以Platform遞增排序、若有相同數值則再以Diameter遞增排序
+```
 
 ----
 [使用委派 (C# 程式設計手冊)](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates)
+[Lambda 運算式和匿名函式](https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/lambda-expressions)
 
