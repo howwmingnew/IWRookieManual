@@ -10,7 +10,7 @@
 - [C# SolidColorBrush](#SolidColorBrush)
 - [CommandLine呼叫](#CommandLine呼叫)
 - [Console 輸出](#Console輸出)
-- [Lambda 運算式和匿名函式](#Lambda)
+- [Lambda 運算式和匿名函式](#Lambda-運算式和匿名函式)
 
 ----
 
