@@ -1,5 +1,8 @@
 # NuGet套件: Humanizer
-> Popular high-performance JSON framework for .NET
+> Humanizer 除了單複數轉換，還有不少好用的功能，
+像是將某個時間點換算成昨天或三週前、
+資料量數值轉 KB/MB、句子轉連字線文字(部落格文章標題轉 URL 時很好用)、
+依指定長度或字數省略過長文字加「…」... 等等。
 
 ----
 
