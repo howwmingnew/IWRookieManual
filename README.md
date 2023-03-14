@@ -13,3 +13,8 @@
 ## NuGet®M¥ó
 - [Humanizer](https://github.com/howwmingnew/IWRookieManual/blob/main/MD/Humanizer.md)
 - [Newtonsoft Json.NET](https://github.com/howwmingnew/IWRookieManual/blob/main/MD/NewtonsoftJson.md)
+
+----
+
+## ¨ä¥¦
+- [NSIS(nullsoft scriptable install system)](https://github.com/howwmingnew/IWRookieManual/blob/main/MD/NSIS.md)

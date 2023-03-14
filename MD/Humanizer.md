@@ -7,14 +7,14 @@
 ----
 
 ## 目次
-- [人性化字符串(Humanize String)](#人性化字符串(Humanize-String))
-- [截斷字符串(Truncate String)](#截斷字符串(Truncate-String))
-- [格式化字符串(Format String)](#格式化字符串(Format-String))
-- [人性化日期時間(Humanize DateTime)](#人性化日期時間(Humanize-DateTime))
-- [人性化時間跨度(Humanize TimeSpan)](#人性化時間跨度(Humanize-TimeSpan))
-- [單複數轉換(Inflector methods)](#單複數轉換(Inflector-methods))
-- [流利的日期(Fluent Date)](#流利的日期(Fluent-Date))
-- [字節大小(ByteSize)](#字節大小(ByteSize))
+- [人性化字符串(Humanize String)](#人性化字符串)
+- [截斷字符串(Truncate String)](#截斷字符串)
+- [格式化字符串(Format String)](#格式化字符串)
+- [人性化日期時間(Humanize DateTime)](#人性化日期時間)
+- [人性化時間跨度(Humanize TimeSpan)](#人性化時間跨度)
+- [單複數轉換(Inflector methods)](#單複數轉換)
+- [流利的日期(Fluent Date)](#流利的日期)
+- [字節大小(ByteSize)](#字節大小)
 
 ----
 
@@ -31,7 +31,7 @@
 
 ----
 
-## 人性化字符串(Humanize String)
+## 人性化字符串
 
 僅包含大寫字母且僅由一個單詞組成的字符串始終被視為首字母縮略詞（無論其長度如何）。
 為了保證任何任意字符串始終是人性化的，您必須使用轉換（請參閱下面`Transform`方法）：
@@ -48,7 +48,7 @@
 
 ----
 
-## 截斷字符串(Truncate String)
+## 截斷字符串
 
 您可以使用 `Truncate` 方法截斷字符串：
 ```C#
@@ -59,7 +59,7 @@
 
 ----
 
-## 格式化字符串(Format String)
+## 格式化字符串
 
 您可以使用 `FormatWith()` 方法格式化字符串：
 ```C#
@@ -74,7 +74,7 @@
 
 ----
 
-## 人性化日期時間(Humanize DateTime)
+## 人性化日期時間
 
 您可以將 `DateTime` 或 `DateTimeOffset` 的實例人性化，並取回一個字符串，說明時間向前或向後多遠：
 
@@ -122,7 +122,7 @@ Configurator.DateTimeOffsetHumanizeStrategy = new PrecisionDateTimeOffsetHumaniz
 
 ----
 
-## 人性化時間跨度(Humanize TimeSpan)
+## 人性化時間跨度
 
 您可以在 `TimeSpan` 上調用 `Humanize` 以獲得人性化的表示：
 ```C#
@@ -168,7 +168,7 @@ TimeSpan.FromMilliseconds(1299630020).Humanize(3, toWords: true) => "two weeks, 
 ```
 <br />
 
-## 單複數轉換(Inflector methods)
+## 單複數轉換
 
 `Pluralize` 將提供的輸入複數化，同時考慮不規則和不可數的單詞：
 ```C#
@@ -227,7 +227,7 @@ Vocabularies.Default.AddSingular("(vert|ind)ices$", "$1ex");
 ```
 <br />
 
-## 流利的日期(Fluent Date)
+## 流利的日期
 Humanizer 提供了一個流暢的 API 來處理 `DateTime` 和 `TimeSpan`，如下所示：
 ```C#
 2.Milliseconds() => TimeSpan.FromMilliseconds(2)
@@ -250,7 +250,7 @@ DateTime.Now + 2.Days() + 3.Hours() - 5.Minutes()
 ```
 <br />
 
-## 字節大小(ByteSize)
+## 字節大小
 Humanizer 包括出色的 (ByteSize)[https://github.com/omar/ByteSize] 庫的一個端口。
 對 `ByteSize` 進行了相當多的更改和添加，
 以使與 `ByteSize` 的交互更容易並且與 Humanizer API 更一致。
