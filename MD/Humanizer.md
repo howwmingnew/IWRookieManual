@@ -7,7 +7,7 @@
 ----
 
 ## 目次
-- [人性化字符串(Humanize String)](#人性化字符串(Humanize-String))
+- [[人性化字符串(Humanize String)](#人性化字符串(Humanize-String))](https://github.com/howwmingnew/IWRookieManual/blob/main/MD/Humanizer.md#%E4%BA%BA%E6%80%A7%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2humanize string)
 - [截斷字符串(Truncate String)](#截斷字符串(Truncate-String))
 - [格式化字符串(Format String)](#格式化字符串(Format-String))
 - [人性化日期時間(Humanize DateTime)](#人性化日期時間(Humanize-DateTime))
